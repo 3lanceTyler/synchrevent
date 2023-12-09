@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Head Counter > Settings</title>
+
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/headCounter_settings.css">
+    <script src="scripts/headCounter_settings.js"></script>
+
+</head>
+
+
+
+<body>
+<div id="bodyBG">
+
+
+    <div id="header">
+        <h2 id="stateTagTemp"> <span id="tempStateTag"></span><br><span id="tempStateVer"></span></h2>
+            <script src="scripts/tempDev.js"></script>
+        <h1>Event Head Counter <span style="font-size:18px;">( Settings )</span></h1>
+        <p>Making the headcount simple work!</p>
+    </div>
+
+    <h2 id="eventName">Event</h2>
+
+    <div id="errorPopup" hidden>
+
+        <p id="errorMsg">VAL</p>
+
+    </div>
+
+
+
+
+    <!--Dynamic live entry count data-->
+
+    <div id="mainInfoDisplay">
+
+    <table>
+
+        <tr>
+            <th style="background-color: darkslategrey;"></th>
+            <th>Adults</th>
+            <th>Minors</th>
+            <th>WC</th>
+            <th>Totals</th>
+        </tr>
+
+        <tr>
+            <td class="darkgreen bold">Total IN</td>
+            <td id="adultsTotalIn" class="green">VAL</td>
+            <td id="minorsTotalIn" class="green">VAL</td>
+            <td id="wcTotalIn" class="green">VAL</td>
+            <td id="TotalIn" class="darkgreen bold">VAL</td>
+        </tr>
+
+        <tr>
+            <td class="darkred bold">Total OUT</td>
+            <td id="adultsTotalOut" class="red">VAL</td>
+            <td id="minorsTotalOut" class="red">VAL</td>
+            <td id="wcTotalOut" class="red">VAL</td>
+            <td id="TotalOut" class="darkred bold">VAL</td>
+        </tr>
+
+        <tr>
+            <td class="darkorange bold">Filled Capacity</td>
+            <td id="currentAdults" class="orange">VAL</td>
+            <td id="currentMinors" class="orange">VAL</td>
+            <td id="currentWc" class="orange">VAL</td>
+            <td id="currentTotal" class="darkorange bold">VAL</td>
+        </tr>
+
+    </table>
+
+    <p><b>Max Capacity:</b> <span class="red" id="maxCapacity">VAL</span></p>
+
+    </div>
+
+     <div class="spacer20"></div>
+
+    <!--Event Naming Edit Field-->
+    <div>
+        <input id="eventNameEdit" type="text" placeholder="Event Name">
+            <button id="eventNameEditSubmit" class="button" onclick="editEventName()">Edit Name</button>
+    </div>
+
+     <div class="spacer10"></div>
+
+    <!--Max Capacity Edit Field-->
+    <div>
+        <input id="capacityEdit" type="text" placeholder="Max Capacity">
+            <button id="capacityEditSubmit" class="button" onclick="editMaxCapacity()">Edit Capacity</button>
+    </div>
+     <div class="spacer10"></div>
+
+    <!--Entry Block Toggle Switch-->
+    <span style="vertical-align: middle;"> Entry-Block: </span>
+    <label class="switch">
+        <input id="entryStop" name="entryStop" onclick="entryCheck()" type="checkbox">
+        <span class="slider round"></span>
+    </label>
+    <span id="entryStat" style="vertical-align: middle;"></span>
+        <script>entryCheckInit();</script>
+
+     <div class="spacer10"></div>
+
+    <span style="vertical-align: middle;">Reset Head Count Values To "0"</span>
+    <button id="resetHeadCountData" class="button" type="button" onclick="masterReset()">Reset head count data</button>
+
+    <div id="footerSpace"></div>
+    <div id="footer">
+        <p style="font-weight: bold;font-size:14px;">Information is refreshed automatically every second. Changes will update for all clients either; when they perform an action OR on their next auto-refresh - whichever comes first.</p>
+        <p style="font-size:10px;color:lightgrey;">An <i>alpha</i> feature for <b>Synchrevent</b>.</p>
+    </div>
+
+
+
+
+</div>
+</body>
+
+</html>
