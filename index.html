@@ -1,47 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+
+<html land="en">
 
 <head>
-    <title>Synchrevent > Home</title>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Synchrevent</title>
     <link rel="icon" type="image/png" size="16x16" href="favicon.ico.png" />
 
-<style>
+    <link rel="stylesheet" href="styles/global.css">
+    <link rel="stylesheet" href="styles/index.css">
 
-body {
-    width: 50%;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.spacer {
-    margin: 10px 0;
-}
-
-a {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-p {
-    font-size: 30px;
-    font-weight: bold;
-}
-
-</style>
+    <script src="scripts/index.js"></script>
 
 </head>
 
-
 <body>
+<div id="bodyBG">
 
-    <h1 style="font-size: 40px;">Synchrevent</h1>
-    <h3>Temporary Navigation Page</h1>
-    <a href="headCounter_Index">Head Counter</a>
-    <div class="spacer"></div>
-    <a href="headCounter_Settings">Head Counter Settings</a>
+    <div id="header">
+        <h2 id="stateTagTemp"> <span id="tempStateTag"></span><br><span id="tempStateVer"></span></h2>
+        <h1 id="siteTitle"></h1>
+        <p id="siteQuote"></p>
+    </div>
 
-    <p>This site is <i>very much</i> under development.</p>
-    
+
+
+<div id="temporaryContent">
+    <p class="shadow1in" style="text-align: center; background-color: bisque; padding: 6px; margin: 0 auto; margin-top: 15px; width: 80%;">
+        Welcome to <b>Synchrevent</b>.<br />
+        Currently our site is under development, so there is nothing to see just yet!<br />
+        But do check back! Perhaps you could get involved!
+    </p>
+</div>
+
+
+
+
+
+
+
+    <p style="text-align: center;"><b>Need further support?</b> <br> Contact: <b><span style="color:darkblue" id="adminContactAdd"></span></b> - with the subject "<b><span id="emailSubjectLine"></span></b>".</p>
+        <script>contactInfo()</script>
+
+    <div id="footerSpace"></div>
+    <div id="footer">
+        <p style="font-weight: bold;font-size:14px;"><span class="darkorange">Synchrevent</span> is an <i>under development</i> all-purpose, easy to use platform - assisting in the live relay of critical information during your events.</p>
+        <p style="font-size:10px;color:lightgrey;"><b><span id="CRsiteTitle"></span> ©<span id="CRYear"></span></b></p>
+            <script src="scripts/tempDev.js"></script>
+            <script src="scripts/global.js"></script>
+    </div>
+
+</div>
 </body>
 
 </html>
