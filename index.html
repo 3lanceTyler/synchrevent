@@ -19,6 +19,20 @@
 <body>
 <div id="bodyBG">
 
+    <div id="maintenanceModeContainer">
+        <div>
+        <h1 id="maintenanceTitle"></h1>
+        <h2 id="maintenanceSubtitle"></h2>
+        <h4 id="maintenanceLittletittle"></h4>
+        </div>
+    </div>
+
+
+<div id="bodyContent">
+
+
+
+
     <div id="header">
         <h2 id="stateTagTemp"> <span id="tempStateTag"></span><br><span id="tempStateVer"></span></h2>
         <h1 id="siteTitle"></h1>
@@ -39,10 +53,46 @@
 
 
 
+    <div id="loginCodeContainer" class="shadow3in">
 
+        <h3>Enter Access Code</h3>
+
+            <div id="loginCodeForm" class="shadow1">
+                <input type="text" class="loginCodeInputs" id="LCI1" minlength="1" maxlength="1" placeholder="0">
+                <input type="text" class="loginCodeInputs" id="LCI2" minlength="1" maxlength="1" placeholder="0">
+                <input type="text" class="loginCodeInputs" id="LCI3" minlength="1" maxlength="1" placeholder="0">
+                <input type="text" class="loginCodeInputs" id="LCI4" minlength="1" maxlength="1" placeholder="0">
+                <input type="text" class="loginCodeInputs" id="LCI5" minlength="1" maxlength="1" placeholder="0">
+                <input type="text" class="loginCodeInputs" id="LCI6" minlength="1" maxlength="1" placeholder="0">
+                
+
+            </div>
+
+                <div id="errorPopup" style="margin-left:-10px;" hidden>
+                    <p id="errorMsg"></p>
+                </div>
+
+        <button type="button" onclick="submitEntryCode()" class="button shadow1in" id="loginCodeSubmit">Enter Code</button>
+        <p>If you do not have a code, speak with your event leaders about being granted access.</p>
+
+    </div>
+
+
+    <div id="loginAccountContainer" class="shadow3in">
+
+        <h3>..Or Login Below</h3>
+
+        <p id="accountLoginErrorPopup" class="shadow3in" hidden>!!! Error Logging In !!!</p>
+
+        <input id="loginUsernameInput" class="accountInputs shadow1" type="text" placeholder="Username"> <br />
+        <input id="loginPasswordInput" class="accountInputs shadow1" type="password" placeholder="Password"> <br />
+        <button id="loginAccountSubmit" class="button shadow1in" type="button" onclick="submitAccountDetails()" >Login</button>
+
+    </div>
+        <script>entryCodeResetter()</script>
 
     <p style="text-align: center;"><b>Need further support?</b> <br> Contact: <b><span style="color:darkblue" id="adminContactAdd"></span></b> - with the subject "<b><span id="emailSubjectLine"></span></b>".</p>
-        <script>contactInfo()</script>
+    
 
     <div id="footerSpace"></div>
     <div id="footer">
@@ -50,8 +100,10 @@
         <p style="font-size:10px;color:lightgrey;"><b><span id="CRsiteTitle"></span> ©<span id="CRYear"></span></b></p>
             <script src="scripts/tempDev.js"></script>
             <script src="scripts/global.js"></script>
+                <script>contactInfo()</script>
     </div>
 
+</div>
 </div>
 </body>
 

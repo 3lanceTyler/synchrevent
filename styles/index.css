@@ -69,6 +69,15 @@
     text-align: center;
 }
 
+#accountLoginErrorPopup {
+    background-color: red;
+    padding: 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: #fff;
+    margin: 3% 7%;
+}
+
 
 
 
