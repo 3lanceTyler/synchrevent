@@ -220,7 +220,7 @@ h1 {
 #footer {
     position: fixed;
     bottom: 0px;
-    max-width: 730px;
+    width: 730px;
     padding: 10px;
     background-color: #04AA6D;
     color: #fff;
